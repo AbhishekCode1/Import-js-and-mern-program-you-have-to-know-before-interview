@@ -21,3 +21,5 @@
 ##### 21.js - this keyword
 ##### 22.js - temporal dead zone, let const declaration hoisted, syntax error vs reference error, type error
 ##### 23.js- event in node js
+##### 24.js- prototype in node js
+
