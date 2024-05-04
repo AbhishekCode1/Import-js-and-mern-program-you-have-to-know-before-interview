@@ -16,3 +16,8 @@
 ##### 16.js - sum of all array element
 ##### 17.js - Number is positive negative or zero
 ##### 18.js - get the first and last item of array(https://www.geeksforgeeks.org/javascript-programs/#javascript-array)
+##### 19.js - call method
+##### 20.js -  call, apply method and bind method
+##### 21.js - this keyword
+##### 22.js - temporal dead zone, let const declaration hoisted, syntax error vs reference error, type error
+##### 23.js- event in node js
