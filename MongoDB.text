@@ -1,0 +1,35 @@
+// Create 
+show dbs
+use collge // create db
+show dbs
+db//which db currently we are using
+db.students.insertOne({name:"sandeep", email:"abhishek@gmail.com"})//you can’t see db without any collection and document
+db.students.find().pretty()
+db.students.insertMany([{name:"abhishek", email:"a@gmail.com", number: 1234},{name:"singh", email:"s@gmail.com", number:3456}])
+
+//READ:
+db.students.find()
+db.students.find({name:"singh"})
+db.students.find({name:"singh"},{name:0}).pretty()//name:0 means name false
+db.students.find({name:"singh"},{name:1}).pretty()//name:1 means name true
+db.students.find({name:"singh"},{name:1,_id:0}).pretty()
+db.students.find({fees:"true"}).pretty()
+db.students.find({fees:"true"}).pretty().limit(1)//limit 1 means jaha pahli fee true mile wahi dikha do
+db.students.findOne({fees:"true"}).pretty() //TypeError: db.students.fi ... rue"}).pretty is not a function
+db.students.findOne({ fees: "true" })
+db.students.find({fees:"true"}).pretty().limit(1).skip(1)// wo document dikhaao jaha pahla fee true chhodne ke baad fees true ho
+
+//Update
+db.students.updateOne({name:"singh"},{$set:{mno:678910}})//question
+db.students.updateOne({name:"abhishek"},{$set:{mno:678910}})// question1
+db.students.updateMany({mno:678910},{$set:{fees:"false"}})// question 2nd
+db.students.updateMany({name:singh},{$set:{fees:"true",mno:123}})//ReferenceError: singh is not defined// because singh is not in the semicolon
+db.students.updateMany({name:"singh"},{$set:{fees:"true",mno:123}})// 3rd question
+db.students.updateMany({fees:"true"},{$set:{fees:"false",email:"abcd@gmail.com"}})// 4th question
+
+//Delete
+db.students.deleteOne({name:"sandee"})// 1st question
+db.students.deleteOne({})// 1st document hi delete hoga
+db.students.deleteMany({fees:"false"})// 3rd question
+db.students.deleteMany({})// delete everything
+

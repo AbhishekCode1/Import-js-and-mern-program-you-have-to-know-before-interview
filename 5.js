@@ -25,3 +25,31 @@ function addAsync(a, b) {
   // Call the async function
   performAddition();
   
+
+
+  //Another example of async await
+
+  // Function that returns a promise which resolves after a given delay
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// Async function using await
+async function asyncExample() {
+  console.log("Start");
+
+  // Wait for 2 seconds
+  await delay(2000);
+  
+  console.log("After 2 seconds");
+
+  // Wait for 1 second
+  await delay(1000);
+
+  console.log("After another 1 second");
+
+  return "Done";
+}
+
+// Using the async function
+asyncExample().then(result => console.log(result));
